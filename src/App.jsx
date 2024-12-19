@@ -1,13 +1,13 @@
-import Navbar from './common/navbar/navbar'
+import BarraNavegacion from './common/navbar/BarraNavegacion'
 import './styles/App.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
  
 
   return (
     <>
-    <Navbar></Navbar>
+    <BarraNavegacion></BarraNavegacion>
       <div>
         <h1>Esta página funciona</h1>
         <h2>Y ahora tiene bootstrap</h2>
