@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Syncopate:wght@400;700&display=swap');
+
+h1{
+  font-family: "Syncopate", serif; 
+  font-weight: 700; 
+  font-style: normal;
+}
+h2{ font-family: "Syncopate", serif; 
+  font-weight: 400; 
+  font-style: normal; }
+h3{ font-family: "Montserrat", serif;
+   font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; }
