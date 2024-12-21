@@ -1,6 +1,8 @@
 import BarraNavegacion from './common/navbar/BarraNavegacion'
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import ListaPrecios from './pages/listaPrecios/listaPrecios'
+
 
 function App() {
  
@@ -8,11 +10,7 @@ function App() {
   return (
     <>
     <BarraNavegacion></BarraNavegacion>
-      <div>
-        <h1>Esta página funciona</h1>
-        <h2>Y ahora tiene bootstrap</h2>
-        <h3>Ademas las fuentes funcionan</h3>
-      </div>
+    <ListaPrecios></ListaPrecios>
     </>
   )
 }
