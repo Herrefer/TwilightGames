@@ -1,6 +1,7 @@
 .pedidoContainer {
   width: 100%;
   background-color: #e9e9e9;
+  z-index: 10;
 }
 .botonPedidoContainer {
   min-height: 100%;
@@ -9,4 +10,8 @@
   height: 54px;
   border: none;
   background-color: rgb(173, 115, 226);
+}
+.pedidoLink{
+    text-decoration: none;
+    color: #212529;    
 }

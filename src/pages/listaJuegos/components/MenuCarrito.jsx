@@ -12,7 +12,9 @@ const MenuCarrito = () => {
                 <p className='m-0 fs-6 fw-light'>precio final</p>
             </div>
             <div className='botonPedidoContainer'>
-                <button className='botonPedido rounded-start-pill fs-5'>Al pedido</button>
+                <button className='botonPedido rounded-start-pill fs-5'>
+                    <a  className="pedidoLink" href="#">Al pedido</a>
+                </button>
             </div>
         </div>
     );

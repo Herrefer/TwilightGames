@@ -42,18 +42,17 @@ const ListaJuegos = () => {
         </div>
         {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
         <div>
-          <div>
-            <h2 className="fs-2">Todos los títulos</h2>
+          <h2 className="fs-2">Todos los títulos</h2>
+          <div className="position-sticky top-0 pt-2">
             <Form>
               <Form.Group className="mb-3" controlId="filtrarCategorias">
-                <Form.Text className="text-muted">Filtrar</Form.Text>
                 <div>
                   <select required className="form-select">
-                    <option value="A-Z">A-Z</option>
-                    <option value="Acción">Acción</option>
-                    <option value="Aventuras">Aventuras</option>
-                    <option value="Sigilo">Sigilo</option>
-                    <option value="Disparos">Disparos</option>
+                    <option value="A-Z">Filtro  A-Z</option>
+                    <option value="Acción">Filtro Acción</option>
+                    <option value="Aventuras">Filtro Aventuras</option>
+                    <option value="Sigilo">Filtro Sigilo</option>
+                    <option value="Disparos">Filtro Disparos</option>
                   </select>
                 </div>
               </Form.Group>
