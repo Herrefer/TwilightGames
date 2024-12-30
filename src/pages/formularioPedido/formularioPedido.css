@@ -1,5 +1,7 @@
 .bannerPagina {
   background-image: url(../../assets/bannerBackground.png);
-    background-repeat: no-repeat;
-    background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
 }

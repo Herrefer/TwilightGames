@@ -7,7 +7,7 @@ const FormularioPedido = () => {
   return (
     <>
       {/* aqui revisar si es mejor un margin 4 o 5 (o tal vez más pequeño) */}
-      <div className="d-flex py-4 px-4 bannerPagina border-bottom border-black border-4">
+      <div className="d-flex py-4 px-4 bannerPagina">
         <a href="">
           <i className="bi bi-chevron-left text-light fs-1"></i>
         </a>
