@@ -5,3 +5,6 @@
   border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%;
 }
+.bannerPagina i{
+    -webkit-text-stroke: 1px white;
+}
