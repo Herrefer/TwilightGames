@@ -3,7 +3,7 @@ import "./menuCarrito.css"
 
 const MenuCarrito = () => {
     return (
-        <div className='pedidoContainer position-fixed bottom-0 d-flex justify-content-between align-items-center border border-black border-top'>
+        <div className='pedidoContainer position-fixed bottom-0 d-flex justify-content-between align-items-center'>
             <div>
                 <p className='mb-0 ms-2 fs-5'>X25 JUEGOS</p>
             </div>
