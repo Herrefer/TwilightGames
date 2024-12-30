@@ -1,0 +1,7 @@
+.etiquetaContenedor{
+    border: solid 1px cyan;
+    border-radius: 25px; 
+}
+.etiquetaTexto{
+    font-size: 12px;
+}
