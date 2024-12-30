@@ -1,8 +1,7 @@
 import React from "react";
 import "./listaJuegos.css";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import CardJuego from "./components/CardJuego";
-
 
 const ListaJuegos = () => {
   return (
@@ -18,9 +17,100 @@ const ListaJuegos = () => {
           </p>
         </div>
       </div>
-      <div className="containerCategory d-flex pb-3 gap-2 flex-lg-wrap gap-md-0">
-        <CardJuego></CardJuego>
+      <div className="mb-5">
+        <h2 className="fs-2">Destacados</h2>
+        <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
         </div>
+      </div>
+      {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
+      <div>
+        <div>
+          <h2 className="fs-2">Todos los títulos</h2>
+          <Form>
+            <Form.Group className="mb-3" controlId="filtrarCategorias">
+              <Form.Text className="text-muted">Filtrar</Form.Text>
+              <div>
+                <select required className="form-select">
+                  <option value="A-Z">A-Z</option>
+                  <option value="Acción">Acción</option>
+                  <option value="Aventuras">Aventuras</option>
+                  <option value="Sigilo">Sigilo</option>
+                  <option value="Disparos">Disparos</option>
+                </select>
+              </div>
+            </Form.Group>
+          </Form>
+        </div>
+        <h2>A</h2>
+        <div className="containerCategory d-flex pb-3 gap-3 gap-md-0 mb-4">
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+        </div>
+        <h2>B</h2>
+        <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+        </div>
+        <h2>C</h2>
+        <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+          <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+            <CardJuego></CardJuego>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 };
