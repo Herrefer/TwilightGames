@@ -3,6 +3,7 @@ import "./listaJuegos.css";
 import { Button, Container, Form } from "react-bootstrap";
 import CardJuego from "./components/CardJuego";
 import MenuCarrito from "./components/MenuCarrito";
+import { Link } from "react-router-dom";
 
 const ListaJuegos = () => {
   return (
@@ -12,9 +13,9 @@ const ListaJuegos = () => {
         <div className="mx-4">
           {/* aqui revisar si es mejor un margin 4 o 5 (o tal vez más pequeño) */}
           <div className="d-flex my-4">
-            <a href="">
+            <Link to={"/precios"}>
               <i className="bi bi-chevron-left fs-1 text-black"></i>
-            </a>
+            </Link>
             <p className="text-center flex-grow-1 fs-1">
               Creá tu listado de juegos
             </p>

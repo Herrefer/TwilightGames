@@ -1,5 +1,6 @@
 import React from 'react';
 import "./menuCarrito.css"
+import { Link } from 'react-router-dom';
 
 const MenuCarrito = () => {
     return (
@@ -11,11 +12,11 @@ const MenuCarrito = () => {
                 <p className='m-0 fs-5'>$5500</p>
                 <p className='m-0 fs-6 fw-light'>precio final</p>
             </div>
-            <div className='botonPedidoContainer'>
-                <button className='botonPedido rounded-start-pill fs-5'>
-                    <a  className="pedidoLink" href="#">Al pedido</a>
+            <Link className='botonPedidoContainer' to={"/formulario"}>
+                <button  className='botonPedido rounded-start-pill fs-5'>
+                    Al pedido
                 </button>
-            </div>
+            </Link>
         </div>
     );
 };
