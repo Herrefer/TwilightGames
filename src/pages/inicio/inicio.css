@@ -8,5 +8,9 @@ p{
     font-style: normal;
 }
 .juegosFlash{
+    border: none;
     border-bottom: 1px solid black;
+}
+.juegosOriginales{
+    border: none;
 }

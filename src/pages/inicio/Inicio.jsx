@@ -1,6 +1,7 @@
 import React from "react";
 import "./inicio.css";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -13,31 +14,31 @@ const Inicio = () => {
             <div>
               <p className="text-center fs-3 mt-3 px-2">
                 Juegos: ver y armar un listado{" "}
-                <i class="ms-2 bi bi-arrow-down"></i>
+                <i className="ms-2 bi bi-arrow-down"></i>
               </p>
             </div>
-            <div className="d-flex flex-row justify-content-center pb-2 mx-2 juegosFlash">
+            <button as={Link} to="/precios" className="juegosFlash d-flex flex-row justify-content-center pb-2 juegosFlash w-100">
               <div className="d-flex align-items-center">
                 <p className="mb-0 me-4 fs-5">
                   Juegos Flash (para consolas HEN)
                 </p>
               </div>
               <div>
-                <p className="mb-0">300 títulos</p>
-                <p className="mb-0">disponibles</p>
+                <p className="mb-0 fw-light">300 títulos</p>
+                <p className="mb-0 fw-light">disponibles</p>
               </div>
-            </div>
-            <div className="d-flex flex-row justify-content-center pt-2 px-2">
-              <div className="d-flex align-items-center">
-                <p className="mb-0 me-4 fs-5">
+            </button>
+            <button as={Link} to="/precios" className=" juegosOriginales d-flex flex-row pt-2 px-2">
+              <div className="d-flex">
+                <p className="mb-0 me-4 fs-6">
                   Juegos (para consolas originales)
                 </p>
               </div>
               <div>
-                <p className="mb-0">300 títulos</p>
-                <p className="mb-0">disponibles</p>
+                <p className="mb-0 fw-light">300 títulos</p>
+                <p className="mb-0 fw-light">disponibles</p>
               </div>
-            </div>
+            </button>
           </div>
           <div className="border border-dark mb-5">
             <p className=" text-center fs-3 mt-3">Software (próximamente)</p>
