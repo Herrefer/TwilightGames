@@ -4,8 +4,8 @@ import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ListaJuegos from './pages/listaJuegos/listaJuegos'
 import ListaPrecios from './pages/listaPrecios/listaPrecios'
-
 import FormularioPedido from './pages/formularioPedido/formularioPedido'
+import ResumenPedido from './pages/resumenPedido/resumenPedido'
 
 function App() {
  
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <BarraNavegacion></BarraNavegacion>
-    <><ListaJuegos></ListaJuegos></>
+    <ResumenPedido></ResumenPedido>
     </>
   )
 }

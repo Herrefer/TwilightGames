@@ -1,0 +1,22 @@
+.resumenContainer {
+  width: 100%;
+  background-color: #e9e9e9;
+  z-index: 10;
+}
+.botonResumenContainer {
+  min-height: 100%;
+}
+.botonResumen {
+  height: 54px;
+  border: none;
+  background-color: rgb(173, 115, 226);
+}
+.resumenLink {
+  text-decoration: none;
+  color: #212529;
+}
+.botonCancelar {
+  height: 54px;
+  border: none;
+  background-color: rgb(223, 80, 80);
+}
