@@ -13,7 +13,6 @@ function App() {
   return (
     <>
     <BarraNavegacion></BarraNavegacion>
-    <ResumenPedido></ResumenPedido>
     </>
   )
 }
