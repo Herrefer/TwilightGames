@@ -7,7 +7,7 @@ import { Link, NavLink } from "react-router-dom";
 const BarraNavegacion = () => {
   return (
     <>
-      <Navbar className="barraNav pb-0" as={Link} to="/" >
+      <Navbar className="barraNav pb-0" as={Link} to={"/"} >
         <Container fluid className="ps-0 m-md-0 pe-3">
           <Navbar.Brand href="#">
             <img src={nando_logo2} alt="logo" width={110} />

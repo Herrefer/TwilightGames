@@ -14,11 +14,11 @@ function App() {
       <BrowserRouter>
         <BarraNavegacion></BarraNavegacion>
         <Routes>
-          <Route exac path="/" element={<Inicio></Inicio>}></Route>
-          <Route exac path="/precios" element={<ListaPrecios></ListaPrecios>}></Route>
-          <Route exac path="/juegos" element={<ListaJuegos></ListaJuegos>}></Route>
-          <Route exac path="/formulario" element={<FormularioPedido></FormularioPedido>}></Route>
-          <Route exac path="/resumen" element={<ResumenPedido></ResumenPedido>}></Route>
+          <Route exact path="/" element={<Inicio></Inicio>}></Route>
+          <Route exact path="/precios" element={<ListaPrecios></ListaPrecios>}></Route>
+          <Route exact path="/juegos" element={<ListaJuegos></ListaJuegos>}></Route>
+          <Route exact path="/formulario" element={<FormularioPedido></FormularioPedido>}></Route>
+          <Route exact path="/resumen" element={<ResumenPedido></ResumenPedido>}></Route>
         </Routes>
       </BrowserRouter>
     </>
