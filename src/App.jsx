@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ListaJuegos from './pages/listaJuegos/listaJuegos'
 import ListaPrecios from './pages/listaPrecios/listaPrecios'
 
+import FormularioPedido from './pages/formularioPedido/formularioPedido'
 
 function App() {
  
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
     <BarraNavegacion></BarraNavegacion>
-    <ListaPrecios></ListaPrecios>
+    <><ListaJuegos></ListaJuegos></>
     </>
   )
 }
