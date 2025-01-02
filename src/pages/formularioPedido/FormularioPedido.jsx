@@ -2,15 +2,16 @@ import React from "react";
 import "./formularioPedido.css";
 import { Button, Container, Form } from "react-bootstrap";
 import Banner from "../../assets/bannerBackground.png";
+import { Link } from "react-router-dom";
 
 const FormularioPedido = () => {
   return (
     <>
       {/* aqui revisar si es mejor un margin 4 o 5 (o tal vez más pequeño) */}
       <div className="d-flex py-4 px-4 bannerPagina">
-        <a href="#">
+        <Link to={"/juegos"}>
           <i className="bi bi-chevron-left text-light fs-1"></i>
-        </a>
+        </Link>
         <p className="text-center flex-grow-1 fs-1 mb-0 text-light"> Datos de contacto </p>
       </div>
       <Container fluid className="contenedorPagina">
