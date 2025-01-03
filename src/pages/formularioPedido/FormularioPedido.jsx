@@ -2,16 +2,18 @@ import React from "react";
 import "./formularioPedido.css";
 import { Button, Container, Form } from "react-bootstrap";
 import Banner from "../../assets/bannerBackground.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+
 
 const FormularioPedido = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors, isDirty },
+    formState: { errors},
   } = useForm();
+
+  const navegar = useNavigate()
 
   const onSubmit = (datos) => {
     const id = crypto.randomUUID()
@@ -19,6 +21,7 @@ const FormularioPedido = () => {
     console.log(objetoPedido)
     sessionStorage.setItem('KeyPedido', JSON.stringify(objetoPedido))
     console.log(JSON.parse(sessionStorage.getItem('KeyPedido')) || []);
+    navegar("/resumen")
   };
 
   return (
