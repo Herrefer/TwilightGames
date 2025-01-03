@@ -13,7 +13,13 @@ const FormularioPedido = () => {
     formState: { errors, isDirty },
   } = useForm();
 
-  const onSubmit = (datos) => console.log(datos);
+  const onSubmit = (datos) => {
+    const id = crypto.randomUUID()
+    const objetoPedido= {nombreCompleto: datos.apellidoNombre, telefono: datos.numeroTel, correoElectronico: datos.correo, idPedido: id}
+    console.log(objetoPedido)
+    sessionStorage.setItem('KeyPedido', JSON.stringify(objetoPedido))
+    console.log(JSON.parse(sessionStorage.getItem('KeyPedido')) || []);
+  };
 
   return (
     <>
