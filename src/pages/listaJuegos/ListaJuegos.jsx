@@ -5,9 +5,12 @@ import CardJuego from "./components/CardJuego";
 import MenuCarrito from "./components/MenuCarrito";
 import { Link } from "react-router-dom";
 import { leerjuegos } from "../../helpers/queries";
+import ContenedorJuegos from "./components/ContenedorJuegos";
+
 
 const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
+  const [categoriaForm, setCategoriaForm] = useState("aventura")
 
   useEffect(() => {
     consultarAPI();
@@ -21,6 +24,9 @@ const ListaJuegos = () => {
       console.log(error);
     }
   };
+
+
+
   return (
     <>
       <MenuCarrito></MenuCarrito>
@@ -36,29 +42,7 @@ const ListaJuegos = () => {
             </p>
           </div>
         </div>
-        <div className="mb-5">
-          <h2 className="fs-2">Destacados</h2>
-          <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
-            {Array.from(
-              { length: Math.ceil(listaJuegos.length / 3) },
-              (_, i) => (
-                <div
-                  className="grupoJuegos d-flex flex-column pb-3 gap-2 gap-md-0"
-                  key={i}
-                >
-                  {listaJuegos.slice(i * 3, i * 3 + 3).map((juego) => (
-                    <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
-                  ))}
-                </div>
-              )
-            )}
-            {/* <div className="grupoJuegos d-flex flex-column pb-3 gap-2 gap-md-0">
-              {listaJuegos.map((juego) => (
-                <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
-              ) )}
-            </div> */}
-          </div>
-        </div>
+        <ContenedorJuegos categoriaProp="Destacados" listaJuegosProp={listaJuegos}></ContenedorJuegos>
         {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
@@ -66,17 +50,19 @@ const ListaJuegos = () => {
             <Form>
               <Form.Group className="mb-3" controlId="filtrarCategorias">
                 <div>
-                  <select required className="form-select">
+                  <Form.Select required className="form-select" value={categoriaForm} onChange={(e) => setCategoriaForm(e.target.value)}>
                     <option value="A-Z">Filtro A-Z</option>
-                    <option value="Acción">Filtro Acción</option>
-                    <option value="Aventuras">Filtro Aventuras</option>
-                    <option value="Sigilo">Filtro Sigilo</option>
-                    <option value="Disparos">Filtro Disparos</option>
-                  </select>
+                    <option value="carreras">Filtro Carreras</option>
+                    <option value="aventura">Filtro Aventuras</option>
+                    <option value="sigilo">Filtro Sigilo</option>
+                    <option value="disparos">Filtro Disparos</option>
+                    <option value="deportes">Filtro Deportes</option>
+                  </Form.Select>
                 </div>
               </Form.Group>
             </Form>
           </div>
+          <ContenedorJuegos categoriaProp={categoriaForm} listaJuegosProp={listaJuegos}></ContenedorJuegos>
           {/* <h2>A</h2>
           <div className="containerCategory d-flex pb-3 gap-3 gap-md-0 mb-4">
             <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
