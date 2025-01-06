@@ -1,8 +1,8 @@
 const URL_juegos = import.meta.env.VITE_API_JUEGOS
 
-const leerjuegos = async () => {
+export const leerjuegos = async () => {
     try{
-        const respuesta = fetch(URL_juegos)
+        const respuesta = await fetch(URL_juegos)
         const listaJuegos = await respuesta.json();
         return listaJuegos;
     }

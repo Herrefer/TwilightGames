@@ -1,10 +1,40 @@
 {
-    "juegos":[
-        {"id": "1", "nombre": "Assasins Creed Brotherhood", "img": "source.img", "etiquetas":["aventura", "sigilo", "exploración"]},
-        {"id": "2", "nombre": "Batman Arkham Asylum", "img": "source.img", "etiquetas":["accion", "sigilo", "superhéroes"]},
-        {"id": "3", "nombre": "Call of Duty Black Ops 2", "img": "source.img", "etiquetas":["disparos", "accion", "historia"]},
-        {"id": "4", "nombre": "Need for Speed Most Wanted", "img": "source.img", "etiquetas":["carreras", "autos", "accion"]},
-        {"id": "5", "nombre": "Castlevania 2", "img": "source.img", "etiquetas":["aventura", "fantasia", "accion"]},
-        {"id": "6", "nombre": "Lego Marvel Avengers", "img": "source.img", "etiquetas":["superhéroes", "accion", "infantil"]}    
-    ]
+  "juegos": [
+    {
+      "id": "1",
+      "nombre": "Assasins Creed Brotherhood",
+      "img": "./src/assets/aCBrotherhood.jpg",
+      "etiquetas": ["aventura", "sigilo", "exploración"]
+    },
+    {
+      "id": "2",
+      "nombre": "Batman Arkham Asylum",
+      "img": "./src/assets/batmanArkhamCity.webp",
+      "etiquetas": ["accion", "sigilo", "superhéroes"]
+    },
+    {
+      "id": "3",
+      "nombre": "Call of Duty Black Ops 2",
+      "img": "./src/assets/cODBO2.webp",
+      "etiquetas": ["disparos", "accion", "historia"]
+    },
+    {
+      "id": "4",
+      "nombre": "Need for Speed Most Wanted",
+      "img": "./src/assets/nFSMW.webp",
+      "etiquetas": ["carreras", "autos", "accion"]
+    },
+    {
+      "id": "5",
+      "nombre": "Dishonored",
+      "img": "./src/assets/dishonored.webp",
+      "etiquetas": ["aventura", "fantasia", "accion"]
+    },
+    {
+      "id": "6",
+      "nombre": "Fifa 19",
+      "img": "./src/assets/fifa19.webp",
+      "etiquetas": ["superhéroes", "accion", "infantil"]
+    }
+  ]
 }

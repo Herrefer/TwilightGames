@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./listaJuegos.css";
 import { Button, Container, Form } from "react-bootstrap";
 import CardJuego from "./components/CardJuego";
 import MenuCarrito from "./components/MenuCarrito";
 import { Link } from "react-router-dom";
+import { leerjuegos } from "../../helpers/queries";
 
 const ListaJuegos = () => {
+  const [listaJuegos, setListaJuegos] = useState([]);
+
+  useEffect(() => {
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async () => {
+    try {
+      const listaJuegos = await leerjuegos();
+      setListaJuegos(listaJuegos);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <MenuCarrito></MenuCarrito>
@@ -24,21 +39,24 @@ const ListaJuegos = () => {
         <div className="mb-5">
           <h2 className="fs-2">Destacados</h2>
           <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
+            {Array.from(
+              { length: Math.ceil(listaJuegos.length / 3) },
+              (_, i) => (
+                <div
+                  className="grupoJuegos d-flex flex-column pb-3 gap-2 gap-md-0"
+                  key={i}
+                >
+                  {listaJuegos.slice(i * 3, i * 3 + 3).map((juego) => (
+                    <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
+                  ))}
+                </div>
+              )
+            )}
+            {/* <div className="grupoJuegos d-flex flex-column pb-3 gap-2 gap-md-0">
+              {listaJuegos.map((juego) => (
+                <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
+              ) )}
+            </div> */}
           </div>
         </div>
         {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
@@ -49,7 +67,7 @@ const ListaJuegos = () => {
               <Form.Group className="mb-3" controlId="filtrarCategorias">
                 <div>
                   <select required className="form-select">
-                    <option value="A-Z">Filtro  A-Z</option>
+                    <option value="A-Z">Filtro A-Z</option>
                     <option value="Acción">Filtro Acción</option>
                     <option value="Aventuras">Filtro Aventuras</option>
                     <option value="Sigilo">Filtro Sigilo</option>
@@ -59,7 +77,7 @@ const ListaJuegos = () => {
               </Form.Group>
             </Form>
           </div>
-          <h2>A</h2>
+          {/* <h2>A</h2>
           <div className="containerCategory d-flex pb-3 gap-3 gap-md-0 mb-4">
             <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
               <CardJuego></CardJuego>
@@ -112,7 +130,7 @@ const ListaJuegos = () => {
               <CardJuego></CardJuego>
               <CardJuego></CardJuego>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </>
