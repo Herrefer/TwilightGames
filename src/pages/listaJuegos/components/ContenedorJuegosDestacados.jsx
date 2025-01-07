@@ -2,7 +2,7 @@ import React from "react";
 import "./contenedorJuegos.css";
 import CardJuego from "./CardJuego";
 
-const ContenedorJuegosDestacados = ({listaJuegosProp}) => {
+const ContenedorJuegosDestacados = ({listaJuegosProp,setListaJuegosPedidoProp, listaJuegosPedidoProp}) => {
   const juegosFiltrados = listaJuegosProp.filter(
     (juego) => juego.categoria[1] === "destacado"
   );
@@ -19,7 +19,7 @@ const ContenedorJuegosDestacados = ({listaJuegosProp}) => {
               key={i}
             >
               {juegosFiltrados.slice(i * 3, i * 3 + 3).map((juego) => (
-                <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
+                <CardJuego key={juego.id} juegoProp={juego} setListaJuegosPedidoProp={setListaJuegosPedidoProp} listaJuegosPedidoProp={listaJuegosPedidoProp}></CardJuego>
               ))}
             </div>
           )

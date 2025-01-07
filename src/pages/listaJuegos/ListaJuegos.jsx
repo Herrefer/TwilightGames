@@ -11,6 +11,9 @@ import ContenedorJuegosAZ from "./components/ContenedorJuegosAZ";
 const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
   const [categoriaForm, setCategoriaForm] = useState("aventura");
+  const [listaJuegosPedido, setListaJuegosPedido] = useState([])
+
+  
 
   useEffect(() => {
     consultarAPI();
@@ -54,6 +57,8 @@ const ListaJuegos = () => {
         <ContenedorJuegosDestacados
           categoriaProp="destacado"
           listaJuegosProp={listaJuegos}
+          setListaJuegosPedidoProp={setListaJuegosPedido}
+          listaJuegosPedidoProp={listaJuegosPedido}
         ></ContenedorJuegosDestacados>
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
@@ -82,6 +87,7 @@ const ListaJuegos = () => {
             <ContenedorJuegos
               categoriaProp={categoriaForm}
               listaJuegosProp={listaJuegos}
+              setsetListaJuegosPedido={setListaJuegosPedido}
             ></ContenedorJuegos>
           ) : (
             <div className="mb-5">
@@ -90,6 +96,7 @@ const ListaJuegos = () => {
                 <ContenedorJuegosAZ
                   grupoProp={grupo}
                   juegosAZProp={gruposAZ[grupo.toString()]}
+                  setListaJuegosPedidoProp={setListaJuegosPedido}
                 ></ContenedorJuegosAZ>
               ))} 
             </div>
