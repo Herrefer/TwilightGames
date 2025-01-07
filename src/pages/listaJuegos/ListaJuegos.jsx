@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./listaJuegos.css";
-import { Button, Container, Form } from "react-bootstrap";
-import CardJuego from "./components/CardJuego";
+import {Container, Form } from "react-bootstrap";
 import MenuCarrito from "./components/MenuCarrito";
 import { Link } from "react-router-dom";
 import { leerjuegos } from "../../helpers/queries";
@@ -43,7 +42,6 @@ const ListaJuegos = () => {
       <MenuCarrito></MenuCarrito>
       <Container fluid className="py-4">
         <div className="mx-4">
-          {/* aqui revisar si es mejor un margin 4 o 5 (o tal vez más pequeño) */}
           <div className="d-flex my-4">
             <Link to={"/precios"}>
               <i className="bi bi-chevron-left fs-1 text-black"></i>
@@ -97,60 +95,6 @@ const ListaJuegos = () => {
               ))} 
             </div>
           )}
-          {/* <h2>A</h2>
-          <div className="containerCategory d-flex pb-3 gap-3 gap-md-0 mb-4">
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-          </div>
-          <h2>B</h2>
-          <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-          </div>
-          <h2>C</h2>
-          <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-            <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-              <CardJuego></CardJuego>
-            </div>
-          </div> */}
         </div>
       </Container>
     </>
