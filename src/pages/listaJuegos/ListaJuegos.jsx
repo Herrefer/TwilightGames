@@ -6,7 +6,7 @@ import MenuCarrito from "./components/MenuCarrito";
 import { Link } from "react-router-dom";
 import { leerjuegos } from "../../helpers/queries";
 import ContenedorJuegos from "./components/ContenedorJuegos";
-
+import ContenedorJuegosDestacados from "./components/contenedorJuegosDestacados";
 
 const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
@@ -42,7 +42,7 @@ const ListaJuegos = () => {
             </p>
           </div>
         </div>
-        <ContenedorJuegos categoriaProp="Destacados" listaJuegosProp={listaJuegos}></ContenedorJuegos>
+        <ContenedorJuegosDestacados categoriaProp="destacado" listaJuegosProp={listaJuegos}></ContenedorJuegosDestacados>
         {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
         <div>
           <h2 className="fs-2">Todos los títulos</h2>

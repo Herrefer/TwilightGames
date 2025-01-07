@@ -5,42 +5,42 @@
       "nombre": "Assasins Creed Brotherhood",
       "img": "./src/assets/aCBrotherhood.jpg",
       "etiquetas": ["aventura", "sigilo", "mundo abierto"],
-      "categoria": "aventura"
+      "categoria": ["aventura", "destacado"]
     },
     {
       "id": "2",
       "nombre": "Batman Arkham Asylum",
       "img": "./src/assets/batmanArkhamCity.webp",
       "etiquetas": ["accion", "sigilo", "superhéroes"],
-      "categoria": "sigilo"
+      "categoria": ["sigilo"]
     },
     {
       "id": "3",
       "nombre": "Call of Duty Black Ops 2",
       "img": "./src/assets/cODBO2.webp",
       "etiquetas": ["disparos", "accion", "historia"],
-      "categoria": "disparos"
+      "categoria": ["disparos"]
     },
     {
       "id": "4",
       "nombre": "Need for Speed Most Wanted",
       "img": "./src/assets/nFSMW.webp",
       "etiquetas": ["carreras", "autos", "accion"],
-      "categoria": "carreras"
+      "categoria": ["carreras", "destacado"]
     },
     {
       "id": "5",
       "nombre": "Dishonored",
       "img": "./src/assets/dishonored.webp",
       "etiquetas": ["aventura", "fantasia", "accion"],
-      "categoria": "sigilo"
+      "categoria": ["sigilo"]
     },
     {
       "id": "6",
       "nombre": "Fifa 19",
       "img": "./src/assets/fifa19.webp",
       "etiquetas": ["superhéroes", "accion", "infantil"],
-      "categoria": "deportes"
+      "categoria": ["deportes"]
     }
   ]
 }

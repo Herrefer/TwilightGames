@@ -2,14 +2,14 @@ import React from "react";
 import "./contenedorJuegos.css";
 import CardJuego from "./CardJuego";
 
-const ContenedorJuegos = ({ categoriaProp, listaJuegosProp }) => {
+const ContenedorJuegosDestacados = ({listaJuegosProp}) => {
   const juegosFiltrados = listaJuegosProp.filter(
-    (juego) => juego.categoria[0] === categoriaProp
+    (juego) => juego.categoria[1] === "destacado"
   );
 
   return (
     <div className="mb-5">
-      <h2 className="fs-2">{categoriaProp}</h2>
+      <h2 className="fs-2">Nuevos y Destacados</h2>
       <div className="containerCategory d-flex pb-3 gap-3 gap-md-0">
         {Array.from(
           { length: Math.ceil(juegosFiltrados.length / 3) },
@@ -29,4 +29,4 @@ const ContenedorJuegos = ({ categoriaProp, listaJuegosProp }) => {
   );
 };
 
-export default ContenedorJuegos;
+export default ContenedorJuegosDestacados;
