@@ -55,7 +55,6 @@ const ListaJuegos = () => {
           categoriaProp="destacado"
           listaJuegosProp={listaJuegos}
         ></ContenedorJuegosDestacados>
-        {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
           <div className="position-sticky top-0 pt-2">
