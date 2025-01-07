@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 import { leerjuegos } from "../../helpers/queries";
 import ContenedorJuegos from "./components/ContenedorJuegos";
 import ContenedorJuegosDestacados from "./components/contenedorJuegosDestacados";
+import ContenedorJuegosAZ from "./components/ContenedorJuegosAZ";
 
 const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
-  const [categoriaForm, setCategoriaForm] = useState("aventura")
+  const [categoriaForm, setCategoriaForm] = useState("aventura");
 
   useEffect(() => {
     consultarAPI();
@@ -25,7 +26,17 @@ const ListaJuegos = () => {
     }
   };
 
-
+  const gruposAZ = {};
+  const ordenAlfabetico = listaJuegos.forEach((juego) => {
+    const primeraLetra = juego.nombre[0].toUpperCase();
+    if (!gruposAZ[primeraLetra]) {
+      gruposAZ[primeraLetra] = [];
+    }
+    gruposAZ[primeraLetra].push(juego);
+  });
+  console.log(gruposAZ);
+  const ordenAlfabeticoEstructurado = Object.keys(gruposAZ);
+  
 
   return (
     <>
@@ -42,7 +53,10 @@ const ListaJuegos = () => {
             </p>
           </div>
         </div>
-        <ContenedorJuegosDestacados categoriaProp="destacado" listaJuegosProp={listaJuegos}></ContenedorJuegosDestacados>
+        <ContenedorJuegosDestacados
+          categoriaProp="destacado"
+          listaJuegosProp={listaJuegos}
+        ></ContenedorJuegosDestacados>
         {/* pensar bien cómo hacer la lógica al momento de usar el filtro */}
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
@@ -50,7 +64,12 @@ const ListaJuegos = () => {
             <Form>
               <Form.Group className="mb-3" controlId="filtrarCategorias">
                 <div>
-                  <Form.Select required className="form-select" value={categoriaForm} onChange={(e) => setCategoriaForm(e.target.value)}>
+                  <Form.Select
+                    required
+                    className="form-select"
+                    value={categoriaForm}
+                    onChange={(e) => setCategoriaForm(e.target.value)}
+                  >
                     <option value="A-Z">Filtro A-Z</option>
                     <option value="carreras">Filtro Carreras</option>
                     <option value="aventura">Filtro Aventuras</option>
@@ -62,7 +81,22 @@ const ListaJuegos = () => {
               </Form.Group>
             </Form>
           </div>
-          <ContenedorJuegos categoriaProp={categoriaForm} listaJuegosProp={listaJuegos}></ContenedorJuegos>
+          {categoriaForm !== "A-Z" ? (
+            <ContenedorJuegos
+              categoriaProp={categoriaForm}
+              listaJuegosProp={listaJuegos}
+            ></ContenedorJuegos>
+          ) : (
+            <div className="mb-5">
+              <h2 className="fs-2">A-Z</h2>
+              * {ordenAlfabeticoEstructurado.map((grupo) => (
+                <ContenedorJuegosAZ
+                  grupoProp={grupo}
+                  juegosAZProp={gruposAZ[grupo.toString()]}
+                ></ContenedorJuegosAZ>
+              ))} 
+            </div>
+          )}
           {/* <h2>A</h2>
           <div className="containerCategory d-flex pb-3 gap-3 gap-md-0 mb-4">
             <div className="d-flex flex-column pb-3 gap-2 gap-md-0">
