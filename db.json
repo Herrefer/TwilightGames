@@ -41,6 +41,48 @@
       "img": "./src/assets/fifa19.webp",
       "etiquetas": ["superhéroes", "accion", "infantil"],
       "categoria": ["deportes"]
+    },
+    {
+      "id": "7",
+      "nombre": "Alone in the Dark",
+      "img": "./src/assets/aloneInTheDark.webp",
+      "etiquetas": ["terror", "multijugador", "puzzle"],
+      "categoria": ["aventura"]
+    },
+    {
+      "id": "8",
+      "nombre": "El Señor de los Anillos",
+      "img": "./src/assets/elSeñorDeLosAnillos.webp",
+      "etiquetas": ["mundo abierto", "fantasia", "multijugador"],
+      "categoria": ["aventura"]
+    },
+    {
+      "id": "9",
+      "nombre": "Formula 1",
+      "img": "./src/assets/f1.webp",
+      "etiquetas": ["carreras", "autos"],
+      "categoria": ["carreras"]
+    },
+    {
+      "id": "10",
+      "nombre": "F.3.A.R",
+      "img": "./src/assets/fear.webp",
+      "etiquetas": ["terror", "disparos", "accion"],
+      "categoria": ["disparos", "destacado"]
+    },
+    {
+      "id": "11",
+      "nombre": "God of War 3",
+      "img": "./src/assets/gow3.webp",
+      "etiquetas": ["aventura", "accion", "violencia"],
+      "categoria": ["aventura", "destacado"]
+    },
+    {
+      "id": "12",
+      "nombre": "Grid 2",
+      "img": "./src/assets/grid2.webp",
+      "etiquetas": ["carreras", "autos"],
+      "categoria": ["carreras"]
     }
   ]
 }
