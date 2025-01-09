@@ -7,6 +7,7 @@ const ContenedorJuegosAZ = ({
   juegosAZProp,
   setListaJuegosPedidoProp,
   listaJuegosPedidoProp,
+  setContadorJuegosPedidoProp
 }) => {
   return (
     <div className="mb-5">
@@ -23,6 +24,7 @@ const ContenedorJuegosAZ = ({
                 juegoProp={juego}
                 setListaJuegosPedidoProp={setListaJuegosPedidoProp}
                 listaJuegosPedidoProp={listaJuegosPedidoProp}
+                setContadorJuegosPedidoProp={setContadorJuegosPedidoProp}
               ></CardJuego>
             ))}
           </div>

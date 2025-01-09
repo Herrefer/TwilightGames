@@ -12,6 +12,7 @@ const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
   const [categoriaForm, setCategoriaForm] = useState("aventura");
   const [listaJuegosPedido, setListaJuegosPedido] = useState([]);
+  const [contadorJuegosPedido, setContadorJuegosPedido] = useState (0);
 
   useEffect(() => {
     consultarAPI();
@@ -37,9 +38,11 @@ const ListaJuegos = () => {
   console.log(gruposAZ);
   const ordenAlfabeticoEstructurado = Object.keys(gruposAZ);
 
+
+
   return (
     <>
-      <MenuCarrito></MenuCarrito>
+      <MenuCarrito contadorJuegosPedidoProp={contadorJuegosPedido}></MenuCarrito>
       <Container fluid className="py-4">
         <div className="mx-4">
           <div className="d-flex my-4">
@@ -56,6 +59,7 @@ const ListaJuegos = () => {
           listaJuegosProp={listaJuegos}
           setListaJuegosPedidoProp={setListaJuegosPedido}
           listaJuegosPedidoProp={listaJuegosPedido}
+          setContadorJuegosPedidoProp={setContadorJuegosPedido}
         ></ContenedorJuegosDestacados>
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
@@ -86,6 +90,7 @@ const ListaJuegos = () => {
               listaJuegosProp={listaJuegos}
               setListaJuegosPedidoProp={setListaJuegosPedido}
               listaJuegosPedidoProp={listaJuegosPedido}
+              setContadorJuegosPedidoProp={setContadorJuegosPedido}
             ></ContenedorJuegos>
           ) : (
             <div className="mb-5">
@@ -96,6 +101,7 @@ const ListaJuegos = () => {
                   juegosAZProp={gruposAZ[grupo.toString()]}
                   setListaJuegosPedidoProp={setListaJuegosPedido}
                   listaJuegosPedidoProp={listaJuegosPedido}
+                  setContadorJuegosPedidoProp={setContadorJuegosPedido}
                 ></ContenedorJuegosAZ>
               ))}
             </div>

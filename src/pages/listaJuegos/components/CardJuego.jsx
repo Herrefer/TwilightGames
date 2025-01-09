@@ -6,6 +6,7 @@ const CardJuego = ({
   juegoProp,
   setListaJuegosPedidoProp,
   listaJuegosPedidoProp,
+  setContadorJuegosPedidoProp
 }) => {
   function agregarJuego() {
     console.log("el boton funciona!");
@@ -17,6 +18,7 @@ const CardJuego = ({
     listaAux.push(aniadirJuego);
     setListaJuegosPedidoProp(listaAux);
     console.log(listaJuegosPedidoProp);
+    setContadorJuegosPedidoProp(listaAux.length)
   }
 
   return (
