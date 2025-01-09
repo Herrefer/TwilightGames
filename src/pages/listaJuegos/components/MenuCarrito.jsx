@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 
 const MenuCarrito = ({
-  props,
   contadorJuegosPedidoProp,
   listaJuegosPedidoProp,
 }) => {
