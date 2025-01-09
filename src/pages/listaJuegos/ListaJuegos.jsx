@@ -42,7 +42,7 @@ const ListaJuegos = () => {
 
   return (
     <>
-      <MenuCarrito contadorJuegosPedidoProp={contadorJuegosPedido}></MenuCarrito>
+      <MenuCarrito contadorJuegosPedidoProp={contadorJuegosPedido} listaJuegosPedidoProp={listaJuegosPedido}></MenuCarrito>
       <Container fluid className="py-4">
         <div className="mx-4">
           <div className="d-flex my-4">
@@ -94,7 +94,7 @@ const ListaJuegos = () => {
             ></ContenedorJuegos>
           ) : (
             <div className="mb-5">
-              <h2 className="fs-2">A-Z</h2>*{" "}
+              <h2 className="fs-2">A-Z</h2>{" "}
               {ordenAlfabeticoEstructurado.map((grupo) => (
                 <ContenedorJuegosAZ
                   grupoProp={grupo}

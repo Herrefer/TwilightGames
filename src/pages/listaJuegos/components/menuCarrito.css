@@ -21,3 +21,13 @@
   border: none;
   background-color: #68e1ff
 }
+.botonEliminarDeLista{
+  border: none;
+  background-color: white;
+  border-radius: 100%;
+}
+.modalListadoDeJuegos{
+  overflow-y: scroll;
+  min-height: 350px;
+  max-height: 350px;
+}
