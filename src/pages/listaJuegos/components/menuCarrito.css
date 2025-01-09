@@ -13,5 +13,11 @@
 }
 .pedidoLink{
     text-decoration: none;
-    color: #212529;    
+    color: #212529;   
+}
+.botonMostrarListado{
+  height: 54px;
+  width: 33.8%;
+  border: none;
+  background-color: #68e1ff
 }
