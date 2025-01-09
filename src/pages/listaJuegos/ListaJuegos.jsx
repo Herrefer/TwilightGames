@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./listaJuegos.css";
-import {Container, Form } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 import MenuCarrito from "./components/MenuCarrito";
 import { Link } from "react-router-dom";
 import { leerjuegos } from "../../helpers/queries";
@@ -11,9 +11,7 @@ import ContenedorJuegosAZ from "./components/ContenedorJuegosAZ";
 const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
   const [categoriaForm, setCategoriaForm] = useState("aventura");
-  const [listaJuegosPedido, setListaJuegosPedido] = useState([])
-
-  
+  const [listaJuegosPedido, setListaJuegosPedido] = useState([]);
 
   useEffect(() => {
     consultarAPI();
@@ -38,7 +36,6 @@ const ListaJuegos = () => {
   });
   console.log(gruposAZ);
   const ordenAlfabeticoEstructurado = Object.keys(gruposAZ);
-  
 
   return (
     <>
@@ -87,18 +84,20 @@ const ListaJuegos = () => {
             <ContenedorJuegos
               categoriaProp={categoriaForm}
               listaJuegosProp={listaJuegos}
-              setsetListaJuegosPedido={setListaJuegosPedido}
+              setListaJuegosPedidoProp={setListaJuegosPedido}
+              listaJuegosPedidoProp={listaJuegosPedido}
             ></ContenedorJuegos>
           ) : (
             <div className="mb-5">
-              <h2 className="fs-2">A-Z</h2>
-              * {ordenAlfabeticoEstructurado.map((grupo) => (
+              <h2 className="fs-2">A-Z</h2>*{" "}
+              {ordenAlfabeticoEstructurado.map((grupo) => (
                 <ContenedorJuegosAZ
                   grupoProp={grupo}
                   juegosAZProp={gruposAZ[grupo.toString()]}
                   setListaJuegosPedidoProp={setListaJuegosPedido}
+                  listaJuegosPedidoProp={listaJuegosPedido}
                 ></ContenedorJuegosAZ>
-              ))} 
+              ))}
             </div>
           )}
         </div>

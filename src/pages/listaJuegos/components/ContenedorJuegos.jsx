@@ -2,7 +2,12 @@ import React from "react";
 import "./contenedorJuegos.css";
 import CardJuego from "./CardJuego";
 
-const ContenedorJuegos = ({ categoriaProp, listaJuegosProp }) => {
+const ContenedorJuegos = ({
+  categoriaProp,
+  listaJuegosProp,
+  setListaJuegosPedidoProp,
+  listaJuegosPedidoProp,
+}) => {
   const juegosFiltrados = listaJuegosProp.filter(
     (juego) => juego.categoria[0] === categoriaProp
   );
@@ -19,7 +24,12 @@ const ContenedorJuegos = ({ categoriaProp, listaJuegosProp }) => {
               key={i}
             >
               {juegosFiltrados.slice(i * 3, i * 3 + 3).map((juego) => (
-                <CardJuego key={juego.id} juegoProp={juego}></CardJuego>
+                <CardJuego
+                  key={juego.id}
+                  juegoProp={juego}
+                  setListaJuegosPedidoProp={setListaJuegosPedidoProp}
+                  listaJuegosPedidoProp={listaJuegosPedidoProp}
+                ></CardJuego>
               ))}
             </div>
           )

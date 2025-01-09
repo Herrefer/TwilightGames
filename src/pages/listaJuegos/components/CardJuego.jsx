@@ -1,20 +1,22 @@
 import React from "react";
 import "./cardJuego.css";
 import EtiquetasCard from "./EtiquetasCard";
-import { useState } from "react";
 
-const CardJuego = ({ juegoProp, setListaJuegosPedidoProp, listaJuegosPedidoProp }) => {
-
-  function agregarJuego(){
-    console.log("el boton funciona!")
-    let listaAux = [...listaJuegosPedidoProp]
+const CardJuego = ({
+  juegoProp,
+  setListaJuegosPedidoProp,
+  listaJuegosPedidoProp,
+}) => {
+  function agregarJuego() {
+    console.log("el boton funciona!");
+    let listaAux = [...listaJuegosPedidoProp];
     const aniadirJuego = {
       id: juegoProp.id,
       juego: juegoProp.nombre,
     };
     listaAux.push(aniadirJuego);
-    setListaJuegosPedidoProp(listaAux)
-    console.log(listaJuegosPedidoProp)
+    setListaJuegosPedidoProp(listaAux);
+    console.log(listaJuegosPedidoProp);
   }
 
   return (
