@@ -19,8 +19,7 @@ const FormularioPedido = () => {
     const id = crypto.randomUUID()
     const objetoPedido= {nombreCompleto: datos.apellidoNombre, telefono: datos.numeroTel, correoElectronico: datos.correo, idPedido: id}
     console.log(objetoPedido)
-    sessionStorage.setItem('KeyPedido', JSON.stringify(objetoPedido))
-    console.log(JSON.parse(sessionStorage.getItem('KeyPedido')) || []);
+    localStorage.setItem('PedidoContacto', JSON.stringify(objetoPedido))
     navegar("/resumen")
   };
 
