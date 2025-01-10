@@ -6,11 +6,25 @@ import { Modal, Button } from "react-bootstrap";
 const MenuCarrito = ({
   contadorJuegosPedidoProp,
   listaJuegosPedidoProp,
+  setListaJuegosPedidoProp,
+  setContadorJuegosPedidoProp
 }) => {
   const [mostrarModal, setMostrarModal] = useState(false);
 
   const handleClose = () => setMostrarModal(false);
   const handleShow = () => setMostrarModal(true);
+
+  const borrarJuego = (id) =>{
+    let listaPedidoAux = [...listaJuegosPedidoProp];
+    console.log(id)
+    console.log(listaPedidoAux)
+    const juegoEncontrado = listaPedidoAux.indexOf(id)
+    console.log(juegoEncontrado)
+    listaPedidoAux.splice(juegoEncontrado, 1)
+    console.log(listaPedidoAux)
+    setListaJuegosPedidoProp(listaPedidoAux)
+    setContadorJuegosPedidoProp(listaPedidoAux.length)
+  }
 
   return (
     <>
@@ -47,7 +61,7 @@ const MenuCarrito = ({
                   <div className="p-1" key={juego.id}>
                     {juego.juego}
                   </div>
-                  <button className="mb-1 botonEliminarDeLista">
+                  <button className="mb-1 botonEliminarDeLista" onClick={() => borrarJuego(juego)}>
                     <i className="bi bi-trash text-danger fs-5"></i>
                   </button>
                 </div>

@@ -12,7 +12,7 @@ const ListaJuegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
   const [categoriaForm, setCategoriaForm] = useState("aventura");
   const [listaJuegosPedido, setListaJuegosPedido] = useState([]);
-  const [contadorJuegosPedido, setContadorJuegosPedido] = useState (0);
+  const [contadorJuegosPedido, setContadorJuegosPedido] = useState(0);
 
   useEffect(() => {
     consultarAPI();
@@ -38,11 +38,14 @@ const ListaJuegos = () => {
   console.log(gruposAZ);
   const ordenAlfabeticoEstructurado = Object.keys(gruposAZ);
 
-
-
   return (
     <>
-      <MenuCarrito contadorJuegosPedidoProp={contadorJuegosPedido} listaJuegosPedidoProp={listaJuegosPedido}></MenuCarrito>
+      <MenuCarrito
+        contadorJuegosPedidoProp={contadorJuegosPedido}
+        listaJuegosPedidoProp={listaJuegosPedido}
+        setListaJuegosPedidoProp={setListaJuegosPedido}
+        setContadorJuegosPedidoProp={setContadorJuegosPedido}
+      ></MenuCarrito>
       <Container fluid className="py-4">
         <div className="mx-4">
           <div className="d-flex my-4">
