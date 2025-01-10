@@ -21,7 +21,7 @@ const CardJuego = ({
     console.log(listaJuegosPedidoProp);
     console.log(juegoProp)
     setContadorJuegosPedidoProp(listaAux.length);
-    console.log(juegoProp.id)
+    localStorage.setItem('Pedido', JSON.stringify(listaAux))
   }
 
   return (

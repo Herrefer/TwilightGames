@@ -48,6 +48,7 @@ const ListaJuegos = () => {
     console.log(listaPedidoAux)
     setListaJuegosPedido(listaPedidoAux)
     setContadorJuegosPedido(listaPedidoAux.length)
+    localStorage.setItem('Pedido', JSON.stringify(listaPedidoAux))
   }
 
 
