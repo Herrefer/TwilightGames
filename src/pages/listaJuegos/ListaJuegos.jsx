@@ -38,6 +38,19 @@ const ListaJuegos = () => {
   console.log(gruposAZ);
   const ordenAlfabeticoEstructurado = Object.keys(gruposAZ);
 
+  const borrarJuego = (id) =>{
+    let listaPedidoAux = [...listaJuegosPedido];
+    console.log(id)
+    console.log(listaPedidoAux)
+    const juegoEncontrado = listaPedidoAux.indexOf(id)
+    console.log(juegoEncontrado)
+    listaPedidoAux.splice(juegoEncontrado, 1)
+    console.log(listaPedidoAux)
+    setListaJuegosPedido(listaPedidoAux)
+    setContadorJuegosPedido(listaPedidoAux.length)
+  }
+
+
   return (
     <>
       <MenuCarrito
@@ -45,6 +58,7 @@ const ListaJuegos = () => {
         listaJuegosPedidoProp={listaJuegosPedido}
         setListaJuegosPedidoProp={setListaJuegosPedido}
         setContadorJuegosPedidoProp={setContadorJuegosPedido}
+        borrarJuego={borrarJuego}
       ></MenuCarrito>
       <Container fluid className="py-4">
         <div className="mx-4">
@@ -63,6 +77,7 @@ const ListaJuegos = () => {
           setListaJuegosPedidoProp={setListaJuegosPedido}
           listaJuegosPedidoProp={listaJuegosPedido}
           setContadorJuegosPedidoProp={setContadorJuegosPedido}
+          borrarJuego={borrarJuego}
         ></ContenedorJuegosDestacados>
         <div>
           <h2 className="fs-2">Todos los títulos</h2>
@@ -94,6 +109,7 @@ const ListaJuegos = () => {
               setListaJuegosPedidoProp={setListaJuegosPedido}
               listaJuegosPedidoProp={listaJuegosPedido}
               setContadorJuegosPedidoProp={setContadorJuegosPedido}
+              borrarJuego={borrarJuego}
             ></ContenedorJuegos>
           ) : (
             <div className="mb-5">
@@ -105,6 +121,7 @@ const ListaJuegos = () => {
                   setListaJuegosPedidoProp={setListaJuegosPedido}
                   listaJuegosPedidoProp={listaJuegosPedido}
                   setContadorJuegosPedidoProp={setContadorJuegosPedido}
+                  borrarJuego={borrarJuego}
                 ></ContenedorJuegosAZ>
               ))}
             </div>

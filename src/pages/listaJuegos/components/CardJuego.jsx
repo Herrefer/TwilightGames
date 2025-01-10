@@ -6,7 +6,8 @@ const CardJuego = ({
   juegoProp,
   setListaJuegosPedidoProp,
   listaJuegosPedidoProp,
-  setContadorJuegosPedidoProp
+  setContadorJuegosPedidoProp,
+  borrarJuego,
 }) => {
   function agregarJuego() {
     console.log("el boton funciona!");
@@ -18,7 +19,9 @@ const CardJuego = ({
     listaAux.push(aniadirJuego);
     setListaJuegosPedidoProp(listaAux);
     console.log(listaJuegosPedidoProp);
-    setContadorJuegosPedidoProp(listaAux.length)
+    console.log(juegoProp)
+    setContadorJuegosPedidoProp(listaAux.length);
+    console.log(juegoProp.id)
   }
 
   return (
@@ -36,9 +39,15 @@ const CardJuego = ({
               <EtiquetasCard etiquetaProp={etiqueta}></EtiquetasCard>
             ))}
           </div>
-          <button className="btnCard" onClick={agregarJuego}>
-            Agregar <i class="bi bi-plus-circle"></i>
-          </button>
+          {listaJuegosPedidoProp.includes(listaJuegosPedidoProp.find((juego) => juego.id === juegoProp.id)) ? (
+            <button className="btnCard" onClick={() => borrarJuego(listaJuegosPedidoProp.find((juego) => juego.id === juegoProp.id))}>
+              Borrar <i className="bi bi-trash text-danger"></i>
+            </button>
+          ) : (
+            <button className="btnCard" onClick={agregarJuego}>
+              Agregar <i class="bi bi-plus-circle"></i>
+            </button>
+          )}
         </div>
       </div>
     </>

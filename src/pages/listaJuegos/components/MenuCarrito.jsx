@@ -6,25 +6,14 @@ import { Modal, Button } from "react-bootstrap";
 const MenuCarrito = ({
   contadorJuegosPedidoProp,
   listaJuegosPedidoProp,
-  setListaJuegosPedidoProp,
-  setContadorJuegosPedidoProp
+  borrarJuego
 }) => {
   const [mostrarModal, setMostrarModal] = useState(false);
 
   const handleClose = () => setMostrarModal(false);
   const handleShow = () => setMostrarModal(true);
 
-  const borrarJuego = (id) =>{
-    let listaPedidoAux = [...listaJuegosPedidoProp];
-    console.log(id)
-    console.log(listaPedidoAux)
-    const juegoEncontrado = listaPedidoAux.indexOf(id)
-    console.log(juegoEncontrado)
-    listaPedidoAux.splice(juegoEncontrado, 1)
-    console.log(listaPedidoAux)
-    setListaJuegosPedidoProp(listaPedidoAux)
-    setContadorJuegosPedidoProp(listaPedidoAux.length)
-  }
+  
 
   return (
     <>

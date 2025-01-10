@@ -6,7 +6,8 @@ const ContenedorJuegosDestacados = ({
   listaJuegosProp,
   setListaJuegosPedidoProp,
   listaJuegosPedidoProp,
-  setContadorJuegosPedidoProp
+  setContadorJuegosPedidoProp,
+  borrarJuego
 }) => {
   const juegosFiltrados = listaJuegosProp.filter(
     (juego) => juego.categoria[1] === "destacado"
@@ -30,6 +31,7 @@ const ContenedorJuegosDestacados = ({
                   setListaJuegosPedidoProp={setListaJuegosPedidoProp}
                   listaJuegosPedidoProp={listaJuegosPedidoProp}
                   setContadorJuegosPedidoProp={setContadorJuegosPedidoProp}
+                  borrarJuego={borrarJuego}
                 ></CardJuego>
               ))}
             </div>
